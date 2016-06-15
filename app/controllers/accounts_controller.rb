@@ -23,7 +23,7 @@ class AccountsController < ApplicationController
   private
   def account_params
     attrs = [:number, :name, :full_name, :gender, :birthday, :email,
-      :password, :password_confirmation]
+      :password, :password_confirmation, :work]
     attrs << { image_attributes: [:_destroy, :id, :uploaded_image] }
     params.require(:account).permit(attrs)
   end

@@ -39,6 +39,10 @@
     </td>
   </tr>
   <tr>
+    <th><%= form.label :work  %></th>
+    <td><%= select_tag :work, options_for_select([["会社員", "company"], ["フリーター", "freeter"], ["ニート", "neat"]]) %></td>
+  </tr>
+  <tr>
     <th><%= form.label :birthday, for: "member_birthday_1i" %></th>
     <td><%= form.date_select :birthday,
               start_year: 1940, end_year: Time.now.year,
